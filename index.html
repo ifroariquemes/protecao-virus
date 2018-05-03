@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Como remover vírus de pendrive - IFRO Campus Ariquemes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <h1 id="ifro-logo">
+      <img src="img/ifro-cpa.png" alt="IFRO Campus Ariquemes">
+    </h1>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Como remover vírus de pendrive</h1>
+        <p class="lead">Projeto realizado por alunos do Instituto Federal de Rondônia - Campus Ariquemes, do segundo ano do Curso Técnico em Manutenção e Suporte em Informática.</p>
+        <p>Welington V. Silva, Weverton R. Anjos, Heloísa S. Barros, Kelvin J. Santos, Kimberly S. Oliveira, Nátally L. Oliveira</p>
+        <p><b>Orientadores:</b> Natanael A. V. Simões, Juliane M. Galiano, Luciano Topolniak</p>
+      </div>
+    </header>
+
+    <section id="como-funciona">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Como funcionam vírus de pendrive</h2>
+            <p>Os vírus capazes de infectar o pendrive atuam de duas maneiras:</p>
+            <ol>
+              <li>O vírus cria na raiz do pen drive um arquivo chamado autorun.inf e se aloja em algum local da mídia. No autorun.inf estará configurado o caminho até o executável do vírus.</li>
+              <li>o vírus troca tudo por atalhos: os arquivos originais do usuário continuam no pen drive, porém numa pasta oculta e na raiz ele cria atalhos para esses arquivos originais. Quando o atalho é executado, um script realiza a infecção do computador com o vírus e depois abre o arquivo escolhido pelo usuário. Dessa forma qualquer pendrive que for conectado a este computador será infectado imediatamente.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Método de proteção</h2>
+            <p>O método que estamos propondo consiste em realizar o bloqueio da raiz do pen drive para evitar a escrita do autorun.inf ou de atalhos, e a criação de uma pasta única onde todos os dados do usuário serão inseridos.</p>
+            <p>Para que isto seja possível o sistema de arquivos do pen drive precisa ser configurado como NTFS, porque este sistema permite atribuir configurações de permissão de usuários ao pen drive. NTFS também suporta a compreensão de dados, ou seja, permite economizar espaço em disco quando necessário, além de aumentar o limite do tamanho dos arquivos (no FAT32 era no máximo 4GB por arquivo). Caso não seja NTFS devemos fazer um backup dos arquivos, e então formatar o pen drive para configura-lo como NTFS.</p>
+            <p>Seguindo com o procedimento devemos criar no pen drive depois de formatado uma pasta e então desabilitar a herança de permissão da raiz do pen drive, que impossibilite criar, alterar ou excluir arquivos na raiz, permitindo apenas a leitura, e então configurar a pasta criada para todas as permissões exceto que outros possam alterar permissões configuradas ou apropriar-se, sendo esta pasta o local onde o dono do pen drive passará a armazenar seus arquivos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 1</h3>
+            <p>Vá em MEU COMPUTADOR  e Clique com o botão direito do mouse no ícone do pen drive e assim que a página abrir Vá em FORMATAR.</p>
+            <p class="text-center"><img src="img/passo1.jpg" alt="passo 1" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 2</h3>
+            <p>Quando esta janela abrir, vá em "SISTEMAS DE ARQUIVOS" e o modifique para NTFS. Caso queira mudar o nome do pen drive, vá em "RÓTULO DO VOLUME" e escreva o nome desejado. Click em FORMATAÇÃO RÁPIDA e em seguida em OK. Depois da formatação for concluída, crie uma pasta em seu pen drive.</p>
+            <p class="text-center"><img src="img/passo2.png" alt="passo 2" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 3</h3>
+            <p>Depois vá em MEU COMPUTADOR, clique com o botão direito no ícone do pen drive e vá em PROPRIEDADES.</p>
+            <p class="text-center"><img src="img/passo3.png" alt="passo 3" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 4</h3>
+            <p>Assim que abrir esta janela, clique em SEGURANÇA e depois em EDITAR.</p>
+            <p class="text-center"><img src="img/passo4.png" alt="passo 4" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 5</h3>
+            <p>Quando a janela abrir vá em PERMISSÕES PARA TODOS e acione em PERMITIR somente a opção LEITURA e desabilite quaisquer outras que estejam na coluna de PERMITIR, após isso vá na coluna NEGAR e acione a opção "GRAVAR" e em seguida clique em APLICAR. Qualquer outra página que abrir é só clicar em CONTINUAR e OK.</p>
+            <p class="text-center"><img src="img/passo5.png" alt="passo 5" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo6">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 6</h3>
+            <p>Lembra da pasta que criamos após a formatação? Então, clique com o botão direito sobre ela e vá em PROPRIEDADES. Quando abrir a página solicitada, clique em SEGURANÇA e depois em EDITAR.</p>
+            <p class="text-center"><img src="img/passo6.png" alt="passo 6" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="passo7">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Passo 7</h3>
+            <p>Quando abrir "Permissões para Meus Arquivos" vá em PERMISSÕES PARA TODOS e acione em PERMITIR a opção CONTROLE TOTAL. Apenas clique em OK e este procedimento estará concluído.</p>
+            <p class="text-center"><img src="img/passo7.png" alt="passo 7" style="width: 100%"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pronto">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h3>Pronto!</h3>
+            <p>Assim que o procedimento for concluído seu pendrive estará protegido de vírus, pois o vírus foi bloqueado de ser executado na raiz do pendrive. Todas as tarefas que o usuário for realizar será dentro da pasta que foi criada, pois assim como as permissões foram alteradas, e não poderão mudar novamente, o vírus, portanto não conseguirá fazer essa modificação nem o usuário.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; IFRO Campus Ariquemes 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+  </body>
+
+</html>
